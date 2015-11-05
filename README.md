@@ -1,5 +1,23 @@
 # VisualBasic_FontAwesome [![Build Status](https://travis-ci.org/f-ewald/VisualBasic_FontAwesome.svg?branch=master)](https://travis-ci.org/f-ewald/VisualBasic_FontAwesome)
 
+A simple project which creates a DLL file to use [Fontawesome](https://fortawesome.github.io/Font-Awesome/) (4.4) icons as labels or images in your VB.NET environment. Upon Build everything is included into a single DLL file. You can use any icon which is on the [CheatSheet](https://fortawesome.github.io/Font-Awesome/cheatsheet/) as an `Enum` as shown in the example.
+
+## How to use
+    Imports VbFontawesome.Fontawesome
+    
+    Public Class C
+    
+        Public Sub New()
+            Dim fa = New Fontawesome()
+            
+            ' Assuming there is a label:
+            
+            ' Set the font first
+            Label1.Font = fa.Font
+            
+            ' Get the character then
+            Label1.Text = fa.GetIcon(VbFontawesome.Fontawesome.Icons.FaVideoCamera)
+
 ## MIT License
 Copyright (c) 2015 Friedrich Ewald
 
